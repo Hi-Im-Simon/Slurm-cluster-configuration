@@ -6,7 +6,7 @@ In this example controller and all nodes will have a user with a username `slurm
 This is an example of what the hostnames of all nodes should look like:
 - _controller_ - main node of the cluster
 - _node_[0-x] - other nodes of the cluster
-- 
+
 How to change nodes' hostname to _example_:
 - change the value to `/etc/hostname` to _example_ and save it (`sudo nano /etc/hostname`)
 - change the value from the previous hostname in `/etc/hosts` to `xxx.x.x.x _example_` and save it (`sudo nano /etc/hosts`)
