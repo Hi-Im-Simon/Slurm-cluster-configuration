@@ -1,6 +1,6 @@
 # Slurm-basic-cluster-configuration
 
-### Basic configs
+## Basic configs
 In this example controller and all nodes will have a user with a username `slurming`.
 
 This is an example of what the hostnames of all nodes should look like:
@@ -23,7 +23,8 @@ For each node:
 - add the CONTROLLER's _inet_ to `/etc/hosts` file, like: `192.168.91.134 controller`
 - add the _inet_ to the controller's `/etc/hosts` file, like: `192.168.91.135 node1`
 
-### passwordless SSH
+
+## passwordless SSH
 On each node:
 - `sudo apt install openssh-server`
 - `sudo visudo`
@@ -37,7 +38,8 @@ On the controller node:
 - `ssh-copy-id nodeX` for each node, where nodeX is the node's name
 - check if everything works via `ssh nodeX sudo hostname`, which should return a hostname of the node without any prompts
 
-### munge
+
+## Munge
 On the controller node:
 - `sudo apt install munge`
 - `create-munge-key`
@@ -63,7 +65,8 @@ On each node:
 - `sudo mv munge.key /etc/munge`
 - `sudo systemctl restart munge`
 
-### slurm
+
+## Slurm
 On the controller AND each node: 
 - `sudo apt install slurm-wlm`
 - copy the _slurm.conf_ file to `/etc/slurm-llnl` (you should edit file's Nodes according to your resources, use `slurmd -C` on each node and the controller)
