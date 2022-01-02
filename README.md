@@ -50,6 +50,7 @@ On each node:
 - `sudo systemctl start munge`
 
 Now we have to copy the CONTROLLER's munge key to each node. We will use some tricks to avoid permission problems.
+
 On the controller node:
 - `cd ~`
 - `sudo cp /etc/munge/munge.key /`
