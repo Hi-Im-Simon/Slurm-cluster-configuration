@@ -1,6 +1,6 @@
 # Slurm-basic-cluster-configuration
 
-## Basic configs
+## Introduction
 In this example controller and all nodes will have a user with a username `slurming`.
 
 This is an example of what the hostnames of all nodes should look like:
@@ -12,6 +12,7 @@ How to change nodes' hostname to _example_:
 - change the value from the previous hostname in `/etc/hosts` to `xxx.x.x.x _example_` and save it (`sudo nano /etc/hosts`)
 - `sudo reboot`
 
+## Basic configs
 On the controller node:
 - `sudo apt install net-tools`
 - `ifconfig`
