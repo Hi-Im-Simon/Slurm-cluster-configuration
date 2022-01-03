@@ -35,7 +35,7 @@ On each node:
 
 On the controller node:
 - `sudo apt install openssh-server`
-- `ssh-keygen -t rsa -b 4096 -C "your-email@address.com` where _your-email@address.com_ is your email address
+- `ssh-keygen -t rsa -b 4096 -C "your-email@address.com"` where _your-email@address.com_ is your email address
 - keep hitting `enter`
 - `ssh-copy-id nodeX` for each node, where nodeX is the node's name
 - check if everything works via `ssh nodeX sudo hostname`, which should return a hostname of the node without any prompts
