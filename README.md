@@ -18,7 +18,7 @@ On the controller node:
 - `ifconfig`
 - copy _inet_ ip address for later
 
-For each node:
+On each node:
 - `sudo apt install net-tools`
 - `ifconfig`
 - copy _inet_ ip address
