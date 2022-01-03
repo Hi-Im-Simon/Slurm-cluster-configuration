@@ -9,7 +9,7 @@ This is an example of what the hostnames of all nodes should look like:
 
 How to change nodes' hostname to _example_:
 - change the value in `/etc/hostname` to _example_ and save it (`sudo nano /etc/hostname`)
-- change the value from the previous hostname in `/etc/hosts` to `xxx.x.x.x _example_` and save it (`sudo nano /etc/hosts`)
+- change the value from the previous hostname in `/etc/hosts` to `127.0.x.x _example_` and save it (`sudo nano /etc/hosts`)
 - `sudo reboot`
 
 ## Basic configs
@@ -22,8 +22,8 @@ On each node:
 - `sudo apt install net-tools`
 - `ifconfig`
 - copy _inet_ ip address
-- add the CONTROLLER's _inet_ to `/etc/hosts` file, like: `192.168.91.134 controller`
-- add the _inet_ to the controller's `/etc/hosts` file, like: `192.168.91.135 node1`
+- add the CONTROLLER's _inet_ to `/etc/hosts` file, example: `192.168.91.134 controller`
+- add the _inet_ to the controller's `/etc/hosts` file, example: `192.168.91.135 node1`
 
 
 ## passwordless SSH
