@@ -55,7 +55,7 @@ Now we have to copy the CONTROLLER's munge key to each node. We will use some tr
 
 On the controller node:
 - `cd ~`
-- `sudo cp /etc/munge/munge.key /`
+- `sudo cp /etc/munge/munge.key ~`
 - `sudo chown slurming:slurming munge.key`
 - `sudo chmod 777 munge.key`
 - `scp munge.key nodeX:~` for each node, where nodeX is the node's name
