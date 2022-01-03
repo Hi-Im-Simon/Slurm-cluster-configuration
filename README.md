@@ -75,6 +75,9 @@ On the controller AND each node:
 - copy the _slurm.conf_ file to `/etc/slurm-llnl` (you should edit file's Nodes according to your resources, use `slurmd -C` on each node and the controller)
 
 On the controller node:
+- `sudo mkdir -p /var/spool/slurm-llnl`
+- `sudo touch /var/log/slurm_jobacct.log`
+- `sudo chown slurm:slurm /var/spool/slurm-llnl /var/log/slurm_jobacct.log`
 - `sudo systemctl start slurmd`
 - `sudo systemctl start slurmctld`
 
