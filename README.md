@@ -44,7 +44,7 @@ On the controller node:
 ## Munge
 On the controller node:
 - `sudo apt install munge`
-- `create-munge-key`
+- `sudo create-munge-key`
 - `sudo systemctl start munge`
 
 On each node:
