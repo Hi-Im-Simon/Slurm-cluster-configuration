@@ -85,4 +85,8 @@ On each node:
 - `sudo systemctl start slurmd`
 
 ## Sources
-[1] https://gist.github.com/ckandoth/2acef6310041244a690e4c08d2610423
+1. https://gist.github.com/ckandoth/2acef6310041244a690e4c08d2610423
+2. https://docs.01.org/clearlinux/latest/tutorials/hpc.html
+3. https://eklausmeier.wordpress.com/2015/01/17/setting-up-slurm-on-multiple-machines/
+4. https://docs.massopen.cloud/en/latest/hpc/Slurm.html
+5. https://slurm.schedmd.com/quickstart_admin.html
