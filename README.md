@@ -84,7 +84,7 @@ On the controller node:
 On each node:
 - `sudo systemctl start slurmd`
 
-***
+<hr>
 
 ## Sources
 1. https://gist.github.com/ckandoth/2acef6310041244a690e4c08d2610423
