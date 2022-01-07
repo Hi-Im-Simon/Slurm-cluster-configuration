@@ -85,12 +85,13 @@ On each node:
 
 
 ## SlurmDB
+### not required, but gives access to useful commands, like `sacct`
 In this example we'll configure a text file based database. It doesn't require any additional daemons.
 
 On the controller node:
 - `sudo touch /var/log/accounting.txt /var/log/job_completions.txt`
 - `sudo chown slurm:slurm /var/log/accounting.txt /var/log/job_completions.txt`
-- `sudo chmod 644 /var/log/accounting.txt /var/log/job_completions.txt`
+- `sudo chmod 666 /var/log/accounting.txt /var/log/job_completions.txt`
 
 
 ## Sources
