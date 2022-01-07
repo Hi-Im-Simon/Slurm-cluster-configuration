@@ -3,7 +3,7 @@
 ## Content
 - [Introduction](#Introduction) - what should be done before you start
 - [Basic-configs](#Basic-configs) - setting up an easy communication between machines
-- [passwordless_SSH](#passwordless_SSH) - giving the main controller access to all the nodes
+- [passwordless-SSH](#passwordless-SSH) - giving the main controller access to all the nodes
 - [Munge](#Munge) - setting up a system so cluster nodes can communicate with each other
 - [Slurm](#Slurm) - installing slurm
 - [Slurm-DB](#Slurm-DB) - (optional) setting up a slurm job database
@@ -36,7 +36,7 @@ On each node:
 - add the _inet_ to the controller's `/etc/hosts` file, example: `192.168.91.135 node1`
 
 
-## passwordless_SSH
+## passwordless-SSH
 On each node:
 - `sudo apt install openssh-server`
 - `sudo visudo`
@@ -94,7 +94,7 @@ On each node:
 - `sudo systemctl start slurmd`
 
 
-## Slurm_DB
+## Slurm-DB
 Not required, but gives access to useful commands, like `sacct`.
 
 In this example we'll configure a text file based database. It doesn't require any additional daemons.
