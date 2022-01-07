@@ -2,11 +2,11 @@
 
 ## Content
 - [Introduction](#Introduction) - what should be done before you start
-- [Basic_configs](#Basic) - setting up an easy communication between machines
-- [passwordless_SSH](#passwordless) - giving the main controller access to all the nodes
+- [Basic-configs](#Basic-configs) - setting up an easy communication between machines
+- [passwordless_SSH](#passwordless_SSH) - giving the main controller access to all the nodes
 - [Munge](#Munge) - setting up a system so cluster nodes can communicate with each other
 - [Slurm](#Slurm) - installing slurm
-- [Slurm_DB](#Slurm_DB) - (optional) setting up a slurm job database
+- [Slurm-DB](#Slurm-DB) - (optional) setting up a slurm job database
 - [Sources](#Sources)
 
 
@@ -22,7 +22,7 @@ How to change nodes' hostname to _example_:
 - change the value from the previous hostname in `/etc/hosts` to `127.0.x.x _example_` and save it (`sudo nano /etc/hosts`)
 - `sudo reboot`
 
-## Basic_configs
+## Basic-configs
 On the controller node:
 - `sudo apt install net-tools`
 - `ifconfig`
