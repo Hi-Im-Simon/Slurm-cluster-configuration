@@ -1,5 +1,8 @@
 # Slurm-basic-cluster-configuration
 
+# Content
+[Introduction](#Introduction)
+
 ## Introduction
 In this example controller and all nodes will have a user with a username `slurming`.
 
@@ -93,6 +96,7 @@ On the controller node:
 - `sudo touch /var/log/accounting.txt /var/log/job_completions.txt`
 - `sudo chown slurm:slurm /var/log/accounting.txt /var/log/job_completions.txt`
 - `sudo chmod 666 /var/log/accounting.txt /var/log/job_completions.txt`
+- `sudo systemctl restart slurmctld`
 
 
 ## Sources
