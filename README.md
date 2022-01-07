@@ -76,8 +76,7 @@ On the controller AND each node:
 
 On the controller node:
 - `sudo mkdir -p /var/spool/slurm-llnl`
-- `sudo touch /var/log/slurm_jobacct.log`
-- `sudo chown slurm:slurm /var/spool/slurm-llnl /var/log/slurm_jobacct.log`
+- `sudo chown slurm:slurm /var/spool/slurm-llnl`
 - `sudo systemctl start slurmd`
 - `sudo systemctl start slurmctld`
 
@@ -85,14 +84,13 @@ On each node:
 - `sudo systemctl start slurmd`
 
 
-## SlurmDBD
-In this example we'll configure a simple text file based database. It doesn't require any additional daemons.
-- `sudo touch /var/log/accounting.txt`
-- `sudo chown slurm:slurm /var/log/accounting.txt`
-- `sudo chmod 644 /var/log/accounting.txt`
-- `sudo touch /var/log/job_completions.txt`
-- `sudo chown slurm:slurm /var/log/job_completions.txt`
-- `sudo chmod 644 /var/log/job_completions.txt`
+## SlurmDB
+In this example we'll configure a text file based database. It doesn't require any additional daemons.
+
+On the controller node:
+- `sudo touch /var/log/accounting.txt /var/log/job_completions.txt`
+- `sudo chown slurm:slurm /var/log/accounting.txt /var/log/job_completions.txt`
+- `sudo chmod 644 /var/log/accounting.txt /var/log/job_completions.txt`
 
 
 ## Sources
@@ -101,3 +99,4 @@ In this example we'll configure a simple text file based database. It doesn't re
 3. https://eklausmeier.wordpress.com/2015/01/17/setting-up-slurm-on-multiple-machines/
 4. https://docs.massopen.cloud/en/latest/hpc/Slurm.html
 5. https://slurm.schedmd.com/quickstart_admin.html
+6. https://github.com/aws/aws-parallelcluster/issues/1494
