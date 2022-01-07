@@ -2,11 +2,11 @@
 
 ## Content
 - [Introduction](#Introduction) - what should be done before you start
-- [Basic configs](#Basic) - setting up an easy communication between machines
-- [passwordless SSH](#passwordless) - giving the main controller access to all the nodes
+- [Basic_configs](#Basic) - setting up an easy communication between machines
+- [passwordless_SSH](#passwordless) - giving the main controller access to all the nodes
 - [Munge](#Munge) - setting up a system so cluster nodes can communicate with each other
 - [Slurm](#Slurm) - installing slurm
-- [SlurmDB](#SlurmDB) - (optional) setting up a slurm job database
+- [Slurm_DB](#Slurm_DB) - (optional) setting up a slurm job database
 - [Sources](#Sources)
 
 
@@ -22,7 +22,7 @@ How to change nodes' hostname to _example_:
 - change the value from the previous hostname in `/etc/hosts` to `127.0.x.x _example_` and save it (`sudo nano /etc/hosts`)
 - `sudo reboot`
 
-## Basic configs
+## Basic_configs
 On the controller node:
 - `sudo apt install net-tools`
 - `ifconfig`
@@ -36,7 +36,7 @@ On each node:
 - add the _inet_ to the controller's `/etc/hosts` file, example: `192.168.91.135 node1`
 
 
-## passwordless SSH
+## passwordless_SSH
 On each node:
 - `sudo apt install openssh-server`
 - `sudo visudo`
@@ -94,7 +94,7 @@ On each node:
 - `sudo systemctl start slurmd`
 
 
-## SlurmDB
+## Slurm_DB
 Not required, but gives access to useful commands, like `sacct`.
 
 In this example we'll configure a text file based database. It doesn't require any additional daemons.
