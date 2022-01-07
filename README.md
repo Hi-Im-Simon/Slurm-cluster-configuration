@@ -85,7 +85,8 @@ On each node:
 
 
 ## SlurmDB
-### not required, but gives access to useful commands, like `sacct`
+Not required, but gives access to useful commands, like `sacct`.
+
 In this example we'll configure a text file based database. It doesn't require any additional daemons.
 
 On the controller node:
