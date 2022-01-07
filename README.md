@@ -1,13 +1,13 @@
 # Slurm-cluster-configuration
 
 ## Content
-* [Introduction - what should be done before you start](#Introduction)
-* [Basic configs - setting up an easy communication between machines](#Basic configs)
-* [passwordless SSH - giving the main controller access to all the nodes](#passwordless SSH)
-* [Munge - setting up a system so cluster nodes can communicate with each other](#Munge)
-* [Slurm - installing slurm](#Slurm)
-* [SlurmDB - (optional) setting up a slurm job database](#SlurmDB)
-* [Sources](#Sources)
+- [Introduction - what should be done before you start](#Introduction)
+- [Basic configs - setting up an easy communication between machines](#Basic)
+- [passwordless SSH - giving the main controller access to all the nodes](#passwordless SSH)
+- [Munge - setting up a system so cluster nodes can communicate with each other](#Munge)
+- [Slurm - installing slurm](#Slurm)
+- [SlurmDB - (optional) setting up a slurm job database](#SlurmDB)
+- [Sources](#Sources)
 
 
 ## Introduction
