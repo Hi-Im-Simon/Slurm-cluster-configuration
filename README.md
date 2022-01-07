@@ -84,6 +84,17 @@ On the controller node:
 On each node:
 - `sudo systemctl start slurmd`
 
+
+## SlurmDBD
+In this example we'll configure a simple text file based database. It doesn't require any additional daemons.
+- `sudo touch /var/log/accounting.txt`
+- `sudo chown slurm:slurm /var/log/accounting.txt`
+- `sudo chmod 644 /var/log/accounting.txt`
+- `sudo touch /var/log/job_completions.txt`
+- `sudo chown slurm:slurm /var/log/job_completions.txt`
+- `sudo chmod 644 /var/log/job_completions.txt`
+
+
 ## Sources
 1. https://gist.github.com/ckandoth/2acef6310041244a690e4c08d2610423
 2. https://docs.01.org/clearlinux/latest/tutorials/hpc.html
