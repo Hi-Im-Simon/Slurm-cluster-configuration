@@ -118,9 +118,7 @@ On the controller node:
 - `sudo mkdir /home/slurming/Slurm`
 - `sudo nano /etc/exports`
 - in the file add a line:
-
 `/home/slurming/Slurm IP_NODE1(rw,no_subtree_check) IP_NODE2(rw,no_subtree_check) IP_NODE3(rw,no_subtree_check) IP_NODE4(rw,no_subtree_check)`
-
 where IP_NODEX are IPs of each node
 - `sudo exportfs -ra`
 - `sudo ufw allow from IP_NODEX to any port nfs` for each node, where IP_NODEX are IPs of each node
