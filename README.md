@@ -7,6 +7,7 @@
 - [Munge](#Munge) - setting up a system so cluster nodes can communicate with each other
 - [Slurm](#Slurm) - installing slurm
 - [Slurm-DB](#Slurm-DB) - (optional) setting up a slurm job database
+- [shared folder](#shared-folder) - (optional) creating a folder shared between all users
 - [Sources](#Sources)
 
 
@@ -21,6 +22,7 @@ How to change nodes' hostname to _example_:
 - change the value in `/etc/hostname` to _example_ and save it (`sudo nano /etc/hostname`)
 - change the value from the previous hostname in `/etc/hosts` to `127.0.x.x _example_` and save it (`sudo nano /etc/hosts`)
 - `sudo reboot`
+
 
 ## Basic-configs
 On the controller node:
@@ -104,6 +106,23 @@ On the controller node:
 - `sudo chown slurm:slurm /var/log/accounting.txt /var/log/job_completions.txt`
 - `sudo chmod 666 /var/log/accounting.txt /var/log/job_completions.txt`
 - `sudo systemctl restart slurmctld`
+
+
+## shared-folder
+Not required, but lets you run your scripts without a need to copy it directly to every node.
+
+In this example we'll create a shared folder `/home/slurming/Slurm`.
+
+On the controller node:
+- `sudo apt install nfs-kernel-server`
+- `sudo mkdir /home/slurming/Slurm`
+- `sudo nano /etc/exports`
+- in the file add a line:
+`/home/slurming/Slurm IP_NODE1(rw,no_subtree_check) IP_NODE2(rw,no_subtree_check) IP_NODE3(rw,no_subtree_check) IP_NODE4(rw,no_subtree_check)`
+where IP_NODEX are IPs of each node
+- `sudo exportfs -ra`
+- `sudo ufw allow from IP_NODEX to any port nfs` for each node, where IP_NODEX are IPs of each node
+- `sudo ufw status`
 
 
 ## Sources
