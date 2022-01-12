@@ -140,3 +140,4 @@ On each node:
 4. https://docs.massopen.cloud/en/latest/hpc/Slurm.html
 5. https://slurm.schedmd.com/quickstart_admin.html
 6. https://github.com/aws/aws-parallelcluster/issues/1494
+7. https://www.blasbenito.com/post/03_shared_folder_in_cluster/
