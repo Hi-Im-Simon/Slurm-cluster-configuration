@@ -125,7 +125,7 @@ where IP_NODEX are IPs of each node
 - `sudo ufw status`
 
 On each node:
-- `sudp apt install nfs-common`
+- `sudo apt install nfs-common`
 - `mkdir -p /home/slurming/Slurm`
 - `sudo mount IP_CONTROLLER:/home/slurming/Slurm /home/slurming/Slurm` where IP_CONTROLLER is the IP of the controller node
 - `sudo nano /etc/fstab`
