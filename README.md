@@ -84,7 +84,7 @@ On each node:
 ## Slurm
 On the controller AND each node: 
 - `sudo apt install slurm-wlm`
-- copy the _slurm.conf_ file to `/etc/slurm-llnl` (you should edit file's Nodes according to your resources, use `slurmd -C` on each node and the controller)
+- copy the _slurm.conf_ file to `/etc/slurm-llnl` (you should edit file's Nodes according to your resources, use `slurmd -C` on each node and the controller for resource info)
 
 On the controller node:
 - `sudo mkdir -p /var/spool/slurm-llnl`
